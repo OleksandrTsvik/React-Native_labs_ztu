@@ -10,9 +10,8 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
     gap: 10,
   },
-  imageItem: {
+  imageContainer: {
     flex: 1,
-    height: 100,
     borderRadius: 4,
     shadowColor: "#000000",
     shadowOffset: {
@@ -21,5 +20,9 @@ export const styles = StyleSheet.create({
     },
     shadowOpacity: 2,
     shadowRadius: 4,
+  },
+  image: {
+    aspectRatio: 1.5,
+    flex: 1,
   },
 });

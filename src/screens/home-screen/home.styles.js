@@ -8,14 +8,18 @@ export const styles = StyleSheet.create({
     marginBottom: 8,
   },
   newsContainer: {
-    flexDirection: "row",
-    gap: 10,
-    marginTop: 6,
+    gap: 20,
+  },
+  newsItemContainer: {
+    flexDirection: "column",
+  },
+  newsImageContainer: {
+    padding: 4,
+    backgroundColor: "#f5f5f5",
   },
   newsImage: {
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    backgroundColor: "#f5f5f5",
+    aspectRatio: 2,
+    flex: 1,
   },
   newsTitle: {
     fontSize: 14,
@@ -24,10 +28,12 @@ export const styles = StyleSheet.create({
   },
   newsDate: {
     fontSize: 10,
+    textAlign: "right",
     color: "#aaa",
   },
   newsShortText: {
     fontSize: 12,
+    textAlign: "justify",
     color: "#141414",
   },
 });

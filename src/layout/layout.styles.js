@@ -43,6 +43,9 @@ export const styles = StyleSheet.create({
   },
   main: {
     flex: 1,
+  },
+  mainContainer: {
+    flex: 1,
     paddingTop: 6,
     paddingBottom: 2,
     paddingHorizontal: 10,
