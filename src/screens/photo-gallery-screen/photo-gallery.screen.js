@@ -1,8 +1,9 @@
 import React from "react";
-import { FlatList, Image, View } from "react-native";
+import { Image, View } from "react-native";
 
 import { getListPhotos } from "./photo-gallery.service";
 import { styles } from "./photo-gallery.styles";
+import ListWithColumns from "../../components/list-with-columns";
 import Loader from "../../components/loader";
 import LayoutScreen from "../../layout/layout.screen";
 import { PHOTOS_URL } from "../../utils/constants";
@@ -22,13 +23,11 @@ export default function PhotoGalleryScreen() {
       {isLoading ? (
         <Loader title="Завантаження галереї ..." />
       ) : (
-        <FlatList
-          data={photos}
+        <ListWithColumns
           numColumns={2}
-          contentContainerStyle={styles.imagesContainer}
-          columnWrapperStyle={styles.imagesColumnWrapper}
-          keyExtractor={(item, index) => index.toString()}
-          renderItem={({ item }) => (
+          data={photos}
+          containerStyle={styles.imagesContainer}
+          renderItem={(item) => (
             <View style={styles.imageContainer}>
               <Image
                 resizeMode="contain"

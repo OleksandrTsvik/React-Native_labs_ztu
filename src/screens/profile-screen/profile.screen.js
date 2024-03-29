@@ -1,4 +1,4 @@
-import { Pressable, ScrollView, Text } from "react-native";
+import { Pressable, View, Text } from "react-native";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
@@ -30,7 +30,8 @@ export default function ProfileScreen() {
   return (
     <LayoutScreen>
       <Text style={styles.title}>Реєстрація</Text>
-      <ScrollView contentContainerStyle={styles.formContainer}>
+
+      <View style={styles.formContainer}>
         <TextInputController
           control={control}
           name="email"
@@ -72,7 +73,7 @@ export default function ProfileScreen() {
         <Pressable style={styles.submitButton} onPress={handleSubmit(onSubmit)}>
           <Text style={styles.submitButtonText}>Зареєструватися</Text>
         </Pressable>
-      </ScrollView>
+      </View>
     </LayoutScreen>
   );
 }

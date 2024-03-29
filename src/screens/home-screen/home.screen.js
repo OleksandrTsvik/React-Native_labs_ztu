@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList, Text } from "react-native";
+import { Text, View } from "react-native";
 
 import { getNewsList } from "./home.service";
 import { styles } from "./home.styles";
@@ -23,12 +23,13 @@ export default function HomeScreen() {
       {isLoading ? (
         <Loader title="Завантаження новин ..." />
       ) : (
-        <FlatList
-          data={news}
-          contentContainerStyle={styles.newsContainer}
-          keyExtractor={(item, index) => index.toString()}
-          renderItem={({ item }) => <NewsListItem newsItem={item} />}
-        />
+        <View style={styles.newsContainer}>
+          {news.map((item, index) => (
+            <React.Fragment key={index}>
+              <NewsListItem newsItem={item} />
+            </React.Fragment>
+          ))}
+        </View>
       )}
     </LayoutScreen>
   );

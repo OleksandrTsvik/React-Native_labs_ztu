@@ -11,7 +11,7 @@ const links = [
 
 export default function Header({ navigation, route }) {
   return (
-    <View>
+    <View style={styles.headerContainer}>
       <View style={styles.header}>
         <Image
           style={styles.headerLogo}

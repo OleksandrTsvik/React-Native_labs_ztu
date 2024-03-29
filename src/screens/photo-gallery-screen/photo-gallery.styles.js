@@ -2,13 +2,8 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   imagesContainer: {
-    gap: 10,
     paddingHorizontal: 3,
     paddingVertical: 6,
-  },
-  imagesColumnWrapper: {
-    justifyContent: "space-between",
-    gap: 10,
   },
   imageContainer: {
     flex: 1,
